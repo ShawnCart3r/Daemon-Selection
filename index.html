@@ -9,17 +9,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Daemon Army Builder</title>
+    <title>Chaos Daemons</title>
   </head>
   <header>
-      <h1 class="text-center">Daemon Army Builder</h1>
+      <h1 class="text-center">Chaos Daemons</h1>
 </header>
   <div class="God">
     <h3 >Choose Your God</h3>
     <form class="form-inline content-justify-center">
      <label for="god-filter"></label>
      <select id="deck-format-filter" class="form-control form-submit-on-change" name="god">
-       <option selected="selected" value="Choose-Your-God">Choose Your God</option>
+       <option selected="selected" value="Select" id="Select">Select</option>
        <option value="Slaanesh">Slaanesh</option>
        <option value="Khorne">Khorne</option>
        <option value="Nurgle">Nurgle</option>
@@ -31,7 +31,7 @@
   <div class="flex-container">
   <div class="d-flex flex-row bg-light">
     <div class="p-2">
-      <div class="card" style="width:400px">
+      <div class="card" style="width:400px" id="Slaanesh1">
         <img class="card-img-top" src="./image/Keeper of Secrets.webp" alt="Keeper-of-Secrets" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">Keeper of Secrets</h4>
@@ -41,7 +41,7 @@
       </div>
       <br></div>
     <div class="p-2"><div class="p-2">
-      <div class="card" style="width:400px">
+      <div class="card" style="width:400px" class="Slaanesh2">
         <img class="card-img-top" src="./image/daemonettes.jpg" alt="Daemonettes" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">Daemonettes</h4>
@@ -51,7 +51,7 @@
       </div>
       <br></div></div>
     <div class="p-2"><div class="p-2">
-      <div class="card" style="width:400px">
+      <div class="card" style="width:400px" class="Slaanesh3">
         <img class="card-img-top" src="./image/Fiends of Slaanesh.webp" alt="Fiends-of-Slaanesh" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">Fiends of Slaanesh</h4>
@@ -60,7 +60,7 @@
         </div>
       </div>
       <br></div></div>
-    <div class="p-2"><div class="p-2">
+    <div class="p-2"><div class="p-2" class="Slaanesh4">
       <div class="card" style="width:400px">
         <img class="card-img-top" src="./image/Seekers of Slaanesh.jpg" alt="Seekers-of-Slaanesh" style="width:100%">
         <div class="card-body">
@@ -74,7 +74,7 @@
   
   <div class="d-flex flex-row bg-light">
     <div class="p-2">
-      <div class="card" style="width:400px">
+      <div class="card" style="width:400px" id="#Khorne1">
         <img class="card-img-top" src="./image/Bloodthrister.webp" alt="BloodThrister" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">Bloodthrister</h4>
@@ -84,7 +84,7 @@
       </div>
       <br></div>
     <div class="p-2"><div class="p-2">
-      <div class="card" style="width:400px">
+      <div class="card" style="width:400px" id="#khorne2">
         <img class="card-img-top" src="./image/bloodletter.jpg" alt="Bloodletter" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">Bloodletters</h4>
@@ -94,7 +94,7 @@
       </div>
       <br></div></div>
     <div class="p-2"><div class="p-2">
-      <div class="card" style="width:400px">
+      <div class="card" style="width:400px"id="#khorne3">
         <img class="card-img-top" src="./image/bloodcrusher.webp" alt="Bloodcrusher" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">Bloodcrushers of Khorne</h4>
@@ -104,7 +104,7 @@
       </div>
       <br></div></div>
     <div class="p-2"><div class="p-2">
-      <div class="card" style="width:400px">
+      <div class="card" style="width:400px" id="khorne4">
         <img class="card-img-top" src="./image/hounds of khorne.jpg" alt="Flesh Hounds" style="width:100%">
         <div class="card-body">
           <h4 class="card-title">Flesh Hounds </h4>
@@ -130,7 +130,7 @@
         <div class="card" style="width:400px">
           <img class="card-img-top" src="./image/Plaguebearer.webp" alt="Plaguebearer" style="width:100%">
           <div class="card-body">
-            <h4 class="card-title">Plaquebearers</h4>
+            <h4 class="card-title">Plaguebearers</h4>
             <p class="card-text">Rotton Paladins of the Plague God, Tainted Ones</p>
             <a href="https://www.games-workshop.com/en-US/Chaos-Daemons-Plaguebearers-of-Nurgle-2018" target="_blank" class="btn btn-primary">See Model</a>
           </div>
@@ -261,12 +261,99 @@
 
   
 
-
+""
  
 </style>
 
 <script>
+
   
+  
+ 
+
+
+  
+
+
+
+  /* $(document).ready(function(){
+  $("button").click(function(){
+    $("#Slaanesh1").fadeOut();
+    $("#Slaanesh2").fadeOut();
+    $("#Slaanesh3").fadeOut();
+    $("#Slaanesh4").fadeOut();
+  });
+});
+  $(document).ready(function(){
+    $("button").click(function(){
+$("#Slaanesh1").fadeIn();
+$("#Slaanesh2").fadeIn();
+$("#Slaanesh3").fadeIn();
+$("#Slaanesh4").fadeIn();
+
+    });
+  });
+
+  $(document).ready(function(){
+  $("button").click(function(){
+    $("#Khorne1").fadeOut();
+    $("#Khorne2").fadeOut();
+    $("#Khorne3").fadeOut();
+    $("#Khorne4").fadeOut();
+  });
+});
+  $(document).ready(function(){
+    $("button").click(function(){
+$("#Khorne1").fadeIn();
+$("#Khorne2").fadeIn();
+$("#Khorne3").fadeIn();
+$("#Khorne4").fadeIn();
+$("#Nurgle5").fadeIn();
+
+    });
+  });
+
+  $(document).ready(function(){
+  $("button").click(function(){
+    $("#Nurgle1").fadeOut();
+    $("#Nurgle2").fadeOut();
+    $("#Nurgle3").fadeOut();
+    $("#Nurgle4").fadeOut();
+    $("#Nurgle5").fadeOut();
+
+  });
+});
+  $(document).ready(function(){
+    $("button").click(function(){
+$("#Nurgle1").fadeIn();
+$("#Nurgle2").fadeIn();
+$("#Nurgle3").fadeIn();
+$("#Nurgle4").fadeIn();
+$("#Nurgle5").fadeIn();
+
+
+    });
+  });
+
+  $(document).ready(function(){
+  $("button").click(function(){
+    $("#Tzeentch1").fadeOut();
+    $("#Tzeentch2").fadeOut();
+    $("#Tzeentch3").fadeOut();
+    $("#Tzeentch4").fadeOut();
+  });
+});
+
+
+  $(document).ready(function(){
+    $("button").click(function(){
+$("#Tzeentch1").fadeIn();
+$("#Tzeentch2").fadeIn();
+$("#Tzeentch3").fadeIn();
+$("#Tzeentch4").fadeIn();
+
+    });
+  }); */
  
 
 </script>
@@ -276,87 +363,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
-</html>
+</html> 
 
 
 
  
-
-<!--
-    <div class="container">
-      <div class="card-body" >Chaos God You Wish to Field</div>
-      <div class="dropdown">
-       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="God">
-         Choose a God
-       </button>
-       
-        <div class="dropdown-menu">
-       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#" id="Slaanesh"> Slaanesh</a>
-        <a class="dropdown-item" href="#" id="Khorne">Khorne</a>
-        <a class="dropdown-item" href="#" id="Nurgle">Nurgle</a>
-        <a class="dropdown-item" href="#" id="Tzeentch">Tzeentch</a>
-        <a class="dropdown-item" href="#" id="Undivided">Undivided</a>
-
-       </div>
-      </div>
-
-      <div class="card-body">HQ</div>
-      <div class="dropdown">
-       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="HQ">HQ</button>
-      
-        <div class="dropdown-menu">
-        
-        <a class="dropdown-item" href="#"id="Keeper-of-Secrets">Keeper of Secrets</a>
-        <a class="dropdown-item" href="#"id="BloodThrister">BloodThrister</a>
-        <a class="dropdown-item" href="#"id="Great-Unclean-One">Great Unclean One</a>
-        <a class="dropdown-item" href="#"id="Lord-of-Change">Lord of Change</a>
-        <a class="dropdown-item" href="#"id="Daemon-Prince">Daemon Prince</a>
-        </form>
-
-      </div>
-      </div>
-
-
-
-
-      <div class="card-body">Troops</div>
-      <div class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="troops">Troops</button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Daemonettes</a>
-        <a class="dropdown-item" href="#">Blood Letters</a>
-        <a class="dropdown-item" href="#">Plaguebearers</a>
-        <a class="dropdown-item" href="#">Nurglings</a>
-        <a class="dropdown-item" href="#">Pink Horrors</a>
-
-      </div>
-      </div>
-
-      <div class="card-body">Elites</div>
-      <div class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="elites">Elites</button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Fiends of Slaanesh</a>
-        <a class="dropdown-item" href="#">Bloodcrushers of Khorne</a>
-        <a class="dropdown-item" href="#">Beast of Nurgle</a>
-        <a class="dropdown-item" href="#">Flamers of Tzeentch</a>
-        
-
-      </div>
-      </div>
-
-      <div class="card-body">Fast Attack</div>
-      <div class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="fast-attack">Fast Attack</button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Seekers of Slaanesh</a>
-        <a class="dropdown-item" href="#">Hounds of Khorne</a>
-        <a class="dropdown-item" href="#">Plague Drones</a>
-        <a class="dropdown-item" href="#">Screamers of Tzeentch</a>
-        <a class="dropdown-item" href="#">Furies</a>
-       
-
-    </div>
-  
--->    
